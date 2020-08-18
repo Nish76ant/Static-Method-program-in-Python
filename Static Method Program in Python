@@ -1,0 +1,55 @@
+class Employee:
+
+    noOfLeaves = 8
+
+    def __init__(self,name,qalification,role,salary):
+           self.name = name
+           self.qalification = qalification
+           self.role = role
+           self.salary = salary
+
+    def printDetails(self):
+        return f'Hey your name is {self.name} and your qalification  is {self.qalification} and your salary is {self.salary}'
+
+    @classmethod
+    def changeOfleaves(cls,newleaves):
+           cls.noOfLeaves = newleaves 
+
+    @classmethod
+    def from_str(cls,string):
+        params = string.split("-")
+        #print(params)
+        return cls(params[0],params[1],params[2],params[3])
+    
+    @staticmethod
+    def printgood(string):
+        print('This is good'+string)  
+        return 'Hii'  
+
+
+
+karan = Employee.from_str('Karan-CSE-Developer-50000')
+print(karan.printgood('Harry'))
+#print(karan.salary)
+#print(karan.printDetl('Karan'))
+
+#ravi = Employee('Ravi','CSE','Developer',50000)
+#print(ravi.printDetl('Harry'))
+#rohan = Employee('Rohan','Computer Science Engineering','Developer',50000)
+#print(rohan.salary)
+# print(rohan.noOfLeaves)
+# rohan.changeOfleaves = 12
+# print(rohan.changeOfleaves)
+# print(rohan.noOfLeaves)
+#print(rohan.printDetails())
+# print(rohan.name)
+# print(rohan.qalification)
+# print(rohan.salary)
+# rohan = Employee()
+# rohan.name = 'Rohan'
+# rohan.qalification = 'Computer Science Engineering'
+# rohan.role = 'Developer'
+# rohan.salary = 50000
+
+# print(rohan.salary)
+# print(rohan.noOfLeaves)
